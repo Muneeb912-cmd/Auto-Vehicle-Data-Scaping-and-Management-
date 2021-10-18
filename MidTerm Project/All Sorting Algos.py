@@ -1,4 +1,4 @@
-#Bubble Sort
+#Bubble Sort for int and string data type
 def bubbleSort(arr):
     n = len(arr)
     for i in range(n):
@@ -8,7 +8,8 @@ def bubbleSort(arr):
 
     return arr
 
-#Insertion Sort
+
+#Insertion Sort and string data type
 def Insertion_Algo(arr):
     for i in range(1, len(arr)):     
         key = arr[i]        
@@ -19,7 +20,7 @@ def Insertion_Algo(arr):
         arr[j + 1] = key
     return arr
 
-#Merge Sort
+#Merge Sort and string data types
 def merge_sort(arr):
     if len(arr)>1:
         mid_point=(len(arr))//2
@@ -50,7 +51,7 @@ def merge_sort(arr):
 
     return arr 
 
-#Quick Sort
+#Quick Sort for int and string data types
 def partition(nums, low, high):
       
     pivot = nums[(low + high) // 2]
@@ -80,7 +81,7 @@ def quick_sort(nums):
 
     _quick_sort(nums, 0, len(nums) - 1)
 
-#Selection Sort
+#Selection Sort for int and string data types
 def selectionSort(arr):
     for i in range(len(arr)):
         min_idx = i
@@ -91,7 +92,7 @@ def selectionSort(arr):
     
     return arr
 
-#Tim Sort
+#Tim Sort for int and string data types
 MINIMUM= 32
   
 def find_minrun(n): 
@@ -166,8 +167,10 @@ def tim_sort(array):
             merge(array, left, mid, right) 
   
         size = 2 * size 
+
+    print(array)
   
-#Heap Sort
+#Heap Sort for int and string data types
 def heapify(arr, n, i):
     largest = i  
     l = 2 * i + 1    
