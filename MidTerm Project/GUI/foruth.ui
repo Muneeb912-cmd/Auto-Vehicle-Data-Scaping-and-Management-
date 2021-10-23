@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>datadisplay</class>
+ <widget class="QWidget" name="datadisplay">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>DataDisplay</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(146, 221, 255)
+   <string notr="true">background-color:rgb(170, 170, 255)
 </string>
   </property>
   <widget class="QLabel" name="label">
@@ -131,7 +131,7 @@
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="gobackdatadisplay">
    <property name="geometry">
     <rect>
      <x>660</x>
@@ -152,7 +152,7 @@
     <string>Go Back</string>
    </property>
    <property name="icon">
-    <iconset resource="a10.qrc">
+    <iconset resource="Pics/a10.qrc">
      <normaloff>:/a10/images (1).png</normaloff>:/a10/images (1).png</iconset>
    </property>
    <property name="iconSize">
@@ -164,7 +164,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="a10.qrc"/>
+  <include location="Pics/a10.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form3</class>
- <widget class="QWidget" name="Form3">
+ <class>MainMenu</class>
+ <widget class="QWidget" name="MainMenu">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>525</height>
+    <width>668</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="font">
@@ -16,10 +16,10 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Main</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(146, 221, 255)
+   <string notr="true">background-color:rgb(170, 170, 255)
 </string>
   </property>
   <widget class="QLabel" name="label">
@@ -83,119 +83,28 @@
     <string>Chose from the followng available options</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="exitmain">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>200</y>
-     <width>281</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial Unicode MS</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(212, 255, 249)</string>
-   </property>
-   <property name="text">
-    <string>Scrap Data and save in csv File</string>
-   </property>
-   <property name="icon">
-    <iconset resource="a6.qrc">
-     <normaloff>:/a6/download-icon-vector-clip-art-260nw-485354581.jpg</normaloff>:/a6/download-icon-vector-clip-art-260nw-485354581.jpg</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>50</width>
-     <height>50</height>
-    </size>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>270</y>
-     <width>281</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial Unicode MS</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(212, 255, 249)</string>
-   </property>
-   <property name="text">
-    <string>Data Sorting                                   </string>
-   </property>
-   <property name="icon">
-    <iconset resource="a7.qrc">
-     <normaloff>:/a7/images.jpg</normaloff>:/a7/images.jpg</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>50</width>
-     <height>50</height>
-    </size>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>340</y>
-     <width>281</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial Unicode MS</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(212, 255, 249)</string>
-   </property>
-   <property name="text">
-    <string>Data Searching                          </string>
-   </property>
-   <property name="icon">
-    <iconset resource="a8.qrc">
-     <normaloff>:/a8/download.jpg</normaloff>:/a8/download.jpg</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>50</width>
-     <height>45</height>
-    </size>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>440</y>
+     <x>530</x>
+     <y>490</y>
      <width>91</width>
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(255, 170, 255)</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Exit</string>
    </property>
    <property name="icon">
-    <iconset resource="a3.qrc">
+    <iconset resource="Pics/a3.qrc">
      <normaloff>:/a3/icons8-exit-30.png</normaloff>:/a3/icons8-exit-30.png</iconset>
    </property>
    <property name="iconSize">
@@ -205,12 +114,128 @@
     </size>
    </property>
   </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>531</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(222, 228, 255);
+border :3px black; </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="scrapdata">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>40</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Unicode MS</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(212, 255, 249)</string>
+    </property>
+    <property name="text">
+     <string>Scrap Data and save in csv File</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Pics/a6.qrc">
+      <normaloff>:/a6/download-icon-vector-clip-art-260nw-485354581.jpg</normaloff>:/a6/download-icon-vector-clip-art-260nw-485354581.jpg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchdata">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>180</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Unicode MS</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(212, 255, 249)</string>
+    </property>
+    <property name="text">
+     <string>Data Searching                          </string>
+    </property>
+    <property name="icon">
+     <iconset resource="Pics/a8.qrc">
+      <normaloff>:/a8/download.jpg</normaloff>:/a8/download.jpg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>45</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sortdata">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Unicode MS</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(212, 255, 249)</string>
+    </property>
+    <property name="text">
+     <string>Data Sorting                                   </string>
+    </property>
+    <property name="icon">
+     <iconset resource="Pics/a7.qrc">
+      <normaloff>:/a7/images.jpg</normaloff>:/a7/images.jpg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <resources>
-  <include location="a6.qrc"/>
-  <include location="a8.qrc"/>
-  <include location="a7.qrc"/>
-  <include location="a3.qrc"/>
+  <include location="Pics/a6.qrc"/>
+  <include location="Pics/a8.qrc"/>
+  <include location="Pics/a7.qrc"/>
+  <include location="Pics/a3.qrc"/>
  </resources>
  <connections/>
 </ui>

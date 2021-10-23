@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>sorting</class>
+ <widget class="QWidget" name="sorting">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>676</width>
-    <height>643</height>
+    <width>788</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>DataSorting</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(146, 221, 255)
+   <string notr="true">background-color:rgb(170, 170, 255)
 </string>
   </property>
   <widget class="QLabel" name="label_2">
@@ -61,7 +61,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>140</y>
+     <y>160</y>
      <width>161</width>
      <height>31</height>
     </rect>
@@ -81,9 +81,9 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>190</y>
-     <width>551</width>
+     <x>70</x>
+     <y>240</y>
+     <width>651</width>
      <height>351</height>
     </rect>
    </property>
@@ -97,10 +97,10 @@ border :3px black; </string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="method1">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>200</x>
       <y>90</y>
       <width>321</width>
       <height>31</height>
@@ -135,10 +135,10 @@ border :3px black; </string>
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="method2">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>200</x>
       <y>250</y>
       <width>321</width>
       <height>31</height>
@@ -171,7 +171,7 @@ border :3px black; </string>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>80</x>
       <y>250</y>
       <width>101</width>
       <height>21</height>
@@ -189,7 +189,7 @@ border :3px black; </string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>80</x>
       <y>50</y>
       <width>101</width>
       <height>21</height>
@@ -207,7 +207,7 @@ border :3px black; </string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>80</x>
       <y>90</y>
       <width>101</width>
       <height>21</height>
@@ -225,7 +225,7 @@ border :3px black; </string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>80</x>
       <y>200</y>
       <width>101</width>
       <height>21</height>
@@ -240,10 +240,10 @@ border :3px black; </string>
      <string>Column Nmae</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="colname1">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>200</x>
       <y>40</y>
       <width>321</width>
       <height>31</height>
@@ -253,10 +253,10 @@ border :3px black; </string>
      <string notr="true">background-color:rgb(255, 255, 255)</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="colname2">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>200</x>
       <y>200</y>
       <width>321</width>
       <height>31</height>
@@ -266,10 +266,10 @@ border :3px black; </string>
      <string notr="true">background-color:rgb(255, 255, 255)</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="apply1">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>300</x>
       <y>130</y>
       <width>75</width>
       <height>31</height>
@@ -282,10 +282,10 @@ border :3px black; </string>
      <string>Apply</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="apply2">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>300</x>
       <y>290</y>
       <width>75</width>
       <height>31</height>
@@ -299,11 +299,11 @@ border :3px black; </string>
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="gobacksorting">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>580</y>
+     <x>650</x>
+     <y>620</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -320,7 +320,7 @@ border :3px black; </string>
     <string>Go Back</string>
    </property>
    <property name="icon">
-    <iconset resource="a10.qrc">
+    <iconset resource="Pics/a10.qrc">
      <normaloff>:/a10/images (1).png</normaloff>:/a10/images (1).png</iconset>
    </property>
    <property name="iconSize">
@@ -332,7 +332,7 @@ border :3px black; </string>
   </widget>
  </widget>
  <resources>
-  <include location="a10.qrc"/>
+  <include location="Pics/a10.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Firstpage</class>
+ <widget class="QWidget" name="Firstpage">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>730</width>
-    <height>578</height>
+    <width>764</width>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Main</string>
+   <string>SDMS</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Pics/images.jpg</normaloff>Pics/images.jpg</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(255, 120, 197)
+   <string notr="true">background-color:rgb(170, 170, 255)
 </string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>140</x>
      <y>40</y>
      <width>451</width>
      <height>31</height>
@@ -43,7 +47,7 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>170</x>
      <y>160</y>
      <width>321</width>
      <height>41</height>
@@ -61,7 +65,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>190</x>
      <y>80</y>
      <width>391</width>
      <height>31</height>
@@ -81,11 +85,16 @@
   <widget class="QPushButton" name="signIn">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>490</x>
      <y>160</y>
      <width>91</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgb(255, 170, 255)</string>
@@ -94,7 +103,7 @@
     <string>Sign In</string>
    </property>
    <property name="icon">
-    <iconset resource="a1.qrc">
+    <iconset resource="Pics/a1.qrc">
      <normaloff>:/a1/icons8-login-30.png</normaloff>:/a1/icons8-login-30.png</iconset>
    </property>
    <property name="iconSize">
@@ -107,7 +116,7 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>100</x>
      <y>220</y>
      <width>551</width>
      <height>251</height>
@@ -205,7 +214,7 @@ border :3px black; </string>
      <string>Password</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="signup">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -218,7 +227,7 @@ border :3px black; </string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="a9.qrc">
+     <iconset resource="Pics/a9.qrc">
       <normaloff>:/a9/download (1).jpg</normaloff>:/a9/download (1).jpg</iconset>
     </property>
     <property name="iconSize">
@@ -232,11 +241,16 @@ border :3px black; </string>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>510</y>
+     <x>620</x>
+     <y>520</y>
      <width>91</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color:rgb(255, 170, 255)</string>
@@ -245,7 +259,7 @@ border :3px black; </string>
     <string>Exit</string>
    </property>
    <property name="icon">
-    <iconset resource="a3.qrc">
+    <iconset resource="Pics/a3.qrc">
      <normaloff>:/a3/icons8-exit-30.png</normaloff>:/a3/icons8-exit-30.png</iconset>
    </property>
    <property name="iconSize">
@@ -257,10 +271,10 @@ border :3px black; </string>
   </widget>
  </widget>
  <resources>
-  <include location="a1.qrc"/>
-  <include location="a9.qrc"/>
-  <include location="a3.qrc"/>
-  <include location="a2.qrc"/>
+  <include location="Pics/a1.qrc"/>
+  <include location="Pics/a9.qrc"/>
+  <include location="Pics/a3.qrc"/>
+  <include location="Pics/a2.qrc"/>
  </resources>
  <connections/>
 </ui>

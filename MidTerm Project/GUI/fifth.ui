@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>SearchData</class>
+ <widget class="QWidget" name="SearchData">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,13 +11,17 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>SearchData</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Pics/download.jpg</normaloff>Pics/download.jpg</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(146, 221, 255)
+   <string notr="true">background-color:rgb(170, 170, 255)
 </string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="gobacksearch">
    <property name="geometry">
     <rect>
      <x>660</x>
@@ -38,8 +42,8 @@
     <string>Go Back</string>
    </property>
    <property name="icon">
-    <iconset resource="a10.qrc">
-     <normaloff>:/a10/images (1).png</normaloff>:/a10/images (1).png</iconset>
+    <iconset>
+     <normaloff>Pics/images (1).png</normaloff>Pics/images (1).png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -100,22 +104,22 @@
    </column>
    <column>
     <property name="text">
-     <string>Transmission</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>Milage</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Car Model</string>
+     <string>Location</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Engine</string>
+     <string>Price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Color</string>
     </property>
    </column>
    <column>
@@ -125,7 +129,7 @@
    </column>
    <column>
     <property name="text">
-     <string>Color</string>
+     <string>Transmission</string>
     </property>
    </column>
   </widget>
@@ -162,7 +166,7 @@
     <string notr="true">background-color:rgb(255, 255, 255)</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="search">
    <property name="geometry">
     <rect>
      <x>560</x>
@@ -172,14 +176,16 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(233, 255, 254)</string>
+    <string notr="true">background-color:rgb(233, 255, 254);
+
+</string>
    </property>
    <property name="text">
     <string>Search</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>download.jpg</normaloff>download.jpg</iconset>
+     <normaloff>Pics/download.jpg</normaloff>Pics/download.jpg</iconset>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -200,7 +206,7 @@
     <string>Search </string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="applyadvancedfilters">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -217,12 +223,12 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>filter-icon-filters-icon-png-favpng-bMRfdP3tDSaVWHe6NJZQaV54x.jpg</normaloff>filter-icon-filters-icon-png-favpng-bMRfdP3tDSaVWHe6NJZQaV54x.jpg</iconset>
+     <normaloff>Pics/download.png</normaloff>Pics/download.png</iconset>
    </property>
    <property name="iconSize">
     <size>
-     <width>20</width>
-     <height>20</height>
+     <width>30</width>
+     <height>30</height>
     </size>
    </property>
   </widget>
@@ -249,7 +255,16 @@
   </widget>
  </widget>
  <resources>
-  <include location="a10.qrc"/>
+  <include location="Pics/a5.qrc"/>
+  <include location="Pics/a9.qrc"/>
+  <include location="Pics/a10.qrc"/>
+  <include location="Pics/a1.qrc"/>
+  <include location="Pics/a2.qrc"/>
+  <include location="Pics/a3.qrc"/>
+  <include location="Pics/a4.qrc"/>
+  <include location="Pics/a7.qrc"/>
+  <include location="Pics/a6.qrc"/>
+  <include location="Pics/a8.qrc"/>
  </resources>
  <connections/>
 </ui>
