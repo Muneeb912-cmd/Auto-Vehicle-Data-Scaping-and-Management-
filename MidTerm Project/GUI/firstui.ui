@@ -21,7 +21,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(170, 170, 255)
+   <string notr="true">background-color:rgb(85, 255, 255)
 </string>
   </property>
   <widget class="QLabel" name="label">
@@ -97,7 +97,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(255, 170, 255)</string>
+    <string notr="true">background-color:rgb(193, 255, 251)</string>
    </property>
    <property name="text">
     <string>Sign In</string>
@@ -123,7 +123,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(170, 255, 255);
+    <string notr="true">background-color:rgb(255, 249, 175);
 border :3px black; </string>
    </property>
    <property name="frameShape">
@@ -253,7 +253,7 @@ border :3px black; </string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(255, 170, 255)</string>
+    <string notr="true">background-color:rgb(193, 255, 251)</string>
    </property>
    <property name="text">
     <string>Exit</string>

@@ -18,7 +18,7 @@ class Ui_Firstpage(object):
         icon.addPixmap(QtGui.QPixmap("Pics/images.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Firstpage.setWindowIcon(icon)
         Firstpage.setAutoFillBackground(False)
-        Firstpage.setStyleSheet("background-color:rgb(170, 170, 255)\n"
+        Firstpage.setStyleSheet("background-color:rgb(85, 255, 255)\n"
 "")
         self.label = QtWidgets.QLabel(Firstpage)
         self.label.setGeometry(QtCore.QRect(140, 40, 451, 31))
@@ -47,7 +47,7 @@ class Ui_Firstpage(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.signIn.setFont(font)
-        self.signIn.setStyleSheet("background-color:rgb(255, 170, 255)")
+        self.signIn.setStyleSheet("background-color:rgb(193, 255, 251)")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Pics/icons8-login-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.signIn.setIcon(icon1)
@@ -55,7 +55,7 @@ class Ui_Firstpage(object):
         self.signIn.setObjectName("signIn")
         self.frame = QtWidgets.QFrame(Firstpage)
         self.frame.setGeometry(QtCore.QRect(100, 220, 551, 251))
-        self.frame.setStyleSheet("background-color:rgb(170, 255, 255);\n"
+        self.frame.setStyleSheet("background-color:rgb(255, 249, 175);\n"
 "border :3px black; ")
         self.frame.setFrameShape(QtWidgets.QFrame.Panel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -101,7 +101,7 @@ class Ui_Firstpage(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.pushButton_2.setFont(font)
-        self.pushButton_2.setStyleSheet("background-color:rgb(255, 170, 255)")
+        self.pushButton_2.setStyleSheet("background-color:rgb(193, 255, 251)")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("Pics/icons8-exit-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_2.setIcon(icon3)
@@ -122,7 +122,6 @@ class Ui_Firstpage(object):
         self.label_5.setText(_translate("Firstpage", "Email"))
         self.label_6.setText(_translate("Firstpage", "Password"))
         self.pushButton_2.setText(_translate("Firstpage", "Exit"))
-
 
 
 if __name__ == "__main__":

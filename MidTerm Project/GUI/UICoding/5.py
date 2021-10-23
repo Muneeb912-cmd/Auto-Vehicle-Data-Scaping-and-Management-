@@ -17,7 +17,7 @@ class Ui_SearchData(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Pics/download.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         SearchData.setWindowIcon(icon)
-        SearchData.setStyleSheet("background-color:rgb(170, 170, 255)\n"
+        SearchData.setStyleSheet("background-color:rgb(85, 255, 255)\n"
 "")
         self.gobacksearch = QtWidgets.QPushButton(SearchData)
         self.gobacksearch.setGeometry(QtCore.QRect(660, 700, 91, 41))

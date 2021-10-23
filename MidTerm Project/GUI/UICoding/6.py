@@ -14,7 +14,7 @@ class Ui_sorting(object):
     def setupUi(self, sorting):
         sorting.setObjectName("sorting")
         sorting.resize(788, 700)
-        sorting.setStyleSheet("background-color:rgb(170, 170, 255)\n"
+        sorting.setStyleSheet("background-color:rgb(85, 255, 255)\n"
 "")
         self.label_2 = QtWidgets.QLabel(sorting)
         self.label_2.setGeometry(QtCore.QRect(30, 70, 391, 31))
@@ -43,7 +43,7 @@ class Ui_sorting(object):
         self.label_3.setObjectName("label_3")
         self.frame = QtWidgets.QFrame(sorting)
         self.frame.setGeometry(QtCore.QRect(70, 240, 651, 351))
-        self.frame.setStyleSheet("background-color:rgb(170, 255, 255);\n"
+        self.frame.setStyleSheet("background-color:rgb(255, 249, 175);\n"
 "border :3px black; ")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -101,11 +101,11 @@ class Ui_sorting(object):
         self.colname2.setObjectName("colname2")
         self.apply1 = QtWidgets.QPushButton(self.frame)
         self.apply1.setGeometry(QtCore.QRect(300, 130, 75, 31))
-        self.apply1.setStyleSheet("background-color:rgb(170, 170, 255)")
+        self.apply1.setStyleSheet("background-color:rgb(193, 255, 251)")
         self.apply1.setObjectName("apply1")
         self.apply2 = QtWidgets.QPushButton(self.frame)
         self.apply2.setGeometry(QtCore.QRect(300, 290, 75, 31))
-        self.apply2.setStyleSheet("background-color:rgb(170, 170, 255)")
+        self.apply2.setStyleSheet("background-color:rgb(193, 255, 251)")
         self.apply2.setObjectName("apply2")
         self.gobacksorting = QtWidgets.QPushButton(sorting)
         self.gobacksorting.setGeometry(QtCore.QRect(650, 620, 91, 41))
@@ -142,7 +142,7 @@ class Ui_sorting(object):
         self.apply1.setText(_translate("sorting", "Apply"))
         self.apply2.setText(_translate("sorting", "Apply"))
         self.gobacksorting.setText(_translate("sorting", "Go Back"))
-# import a10_rc
+
 
 
 if __name__ == "__main__":

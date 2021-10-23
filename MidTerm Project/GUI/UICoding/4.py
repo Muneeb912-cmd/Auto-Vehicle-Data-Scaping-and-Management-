@@ -14,7 +14,7 @@ class Ui_datadisplay(object):
     def setupUi(self, datadisplay):
         datadisplay.setObjectName("datadisplay")
         datadisplay.resize(788, 666)
-        datadisplay.setStyleSheet("background-color:rgb(170, 170, 255)\n"
+        datadisplay.setStyleSheet("background-color:rgb(85, 255, 255)\n"
 "")
         self.label = QtWidgets.QLabel(datadisplay)
         self.label.setGeometry(QtCore.QRect(290, 30, 451, 31))
@@ -95,7 +95,6 @@ class Ui_datadisplay(object):
         item = self.tableWidget.horizontalHeaderItem(6)
         item.setText(_translate("datadisplay", "Color"))
         self.gobackdatadisplay.setText(_translate("datadisplay", "Go Back"))
-# import a10_rc
 
 
 if __name__ == "__main__":

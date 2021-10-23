@@ -17,7 +17,7 @@ class Ui_MainMenu(object):
         font = QtGui.QFont()
         font.setUnderline(True)
         MainMenu.setFont(font)
-        MainMenu.setStyleSheet("background-color:rgb(170, 170, 255)\n"
+        MainMenu.setStyleSheet("background-color:rgb(85, 255, 255)\n"
 "")
         self.label = QtWidgets.QLabel(MainMenu)
         self.label.setGeometry(QtCore.QRect(30, 30, 451, 31))
@@ -49,7 +49,7 @@ class Ui_MainMenu(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.exitmain.setFont(font)
-        self.exitmain.setStyleSheet("")
+        self.exitmain.setStyleSheet("background-color:rgb(193, 255, 251)")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("Pics/icons8-exit-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.exitmain.setIcon(icon)
@@ -57,7 +57,7 @@ class Ui_MainMenu(object):
         self.exitmain.setObjectName("exitmain")
         self.frame = QtWidgets.QFrame(MainMenu)
         self.frame.setGeometry(QtCore.QRect(60, 190, 531, 271))
-        self.frame.setStyleSheet("background-color:rgb(222, 228, 255);\n"
+        self.frame.setStyleSheet("background-color:rgb(255, 249, 175);\n"
 "border :3px black; ")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -112,10 +112,6 @@ class Ui_MainMenu(object):
         self.scrapdata.setText(_translate("MainMenu", "Scrap Data and save in csv File"))
         self.searchdata.setText(_translate("MainMenu", "Data Searching                          "))
         self.sortdata.setText(_translate("MainMenu", "Data Sorting                                   "))
-# import a3_rc
-# import a6_rc
-# import a7_rc
-# import a8_rc
 
 
 if __name__ == "__main__":
