@@ -8,9 +8,31 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import sys
+from file4 import Ui_datadisplay
+from file6 import Ui_sorting
+from file5 import Ui_SearchData
 
 class Ui_MainMenu(object):
+    def open_DataScrappingWindow(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=Ui_datadisplay()
+        self.ui.setupUi(self.window)
+        self.window.show()
+    
+    def open_DataSortingWindow(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=Ui_sorting()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def open_DataSearchingWindow(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=Ui_SearchData()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+
     def setupUi(self, MainMenu):
         MainMenu.setObjectName("MainMenu")
         MainMenu.resize(668, 585)
@@ -55,6 +77,7 @@ class Ui_MainMenu(object):
         self.exitmain.setIcon(icon)
         self.exitmain.setIconSize(QtCore.QSize(50, 50))
         self.exitmain.setObjectName("exitmain")
+        self.exitmain.clicked.connect(sys.exit)
         self.frame = QtWidgets.QFrame(MainMenu)
         self.frame.setGeometry(QtCore.QRect(60, 190, 531, 271))
         self.frame.setStyleSheet("background-color:rgb(255, 249, 175);\n"
@@ -74,6 +97,8 @@ class Ui_MainMenu(object):
         self.scrapdata.setIcon(icon1)
         self.scrapdata.setIconSize(QtCore.QSize(50, 50))
         self.scrapdata.setObjectName("scrapdata")
+        self.scrapdata.clicked.connect(self.open_DataScrappingWindow)
+        self.scrapdata.clicked.connect(MainMenu.close)
         self.searchdata = QtWidgets.QPushButton(self.frame)
         self.searchdata.setGeometry(QtCore.QRect(130, 180, 281, 51))
         font = QtGui.QFont()
@@ -86,6 +111,8 @@ class Ui_MainMenu(object):
         self.searchdata.setIcon(icon2)
         self.searchdata.setIconSize(QtCore.QSize(50, 45))
         self.searchdata.setObjectName("searchdata")
+        self.searchdata.clicked.connect(self.open_DataSearchingWindow)
+        self.searchdata.clicked.connect(MainMenu.close)
         self.sortdata = QtWidgets.QPushButton(self.frame)
         self.sortdata.setGeometry(QtCore.QRect(130, 110, 281, 51))
         font = QtGui.QFont()
@@ -98,7 +125,8 @@ class Ui_MainMenu(object):
         self.sortdata.setIcon(icon3)
         self.sortdata.setIconSize(QtCore.QSize(50, 50))
         self.sortdata.setObjectName("sortdata")
-
+        self.sortdata.clicked.connect(self.open_DataSortingWindow)
+        self.sortdata.clicked.connect(MainMenu.close)
         self.retranslateUi(MainMenu)
         QtCore.QMetaObject.connectSlotsByName(MainMenu)
 
@@ -114,11 +142,4 @@ class Ui_MainMenu(object):
         self.sortdata.setText(_translate("MainMenu", "Data Sorting                                   "))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainMenu = QtWidgets.QWidget()
-    ui = Ui_MainMenu()
-    ui.setupUi(MainMenu)
-    MainMenu.show()
-    sys.exit(app.exec_())
+

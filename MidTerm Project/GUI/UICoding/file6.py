@@ -8,9 +8,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import file3 as f3
 
 class Ui_sorting(object):
+    def open_MainWindow3(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=f3.Ui_MainMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, sorting):
         sorting.setObjectName("sorting")
         sorting.resize(788, 700)
@@ -118,7 +124,8 @@ class Ui_sorting(object):
         self.gobacksorting.setIcon(icon)
         self.gobacksorting.setIconSize(QtCore.QSize(20, 20))
         self.gobacksorting.setObjectName("gobacksorting")
-
+        self.gobacksorting.clicked.connect(self.open_MainWindow3)
+        self.gobacksorting.clicked.connect(sorting.close)
         self.retranslateUi(sorting)
         QtCore.QMetaObject.connectSlotsByName(sorting)
 

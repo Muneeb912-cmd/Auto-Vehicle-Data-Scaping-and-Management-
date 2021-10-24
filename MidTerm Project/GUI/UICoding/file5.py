@@ -8,9 +8,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import file3 as f3
 
 class Ui_SearchData(object):
+    def open_MainWindow2(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=f3.Ui_MainMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, SearchData):
         SearchData.setObjectName("SearchData")
         SearchData.resize(790, 767)
@@ -30,6 +36,8 @@ class Ui_SearchData(object):
         self.gobacksearch.setIcon(icon1)
         self.gobacksearch.setIconSize(QtCore.QSize(20, 20))
         self.gobacksearch.setObjectName("gobacksearch")
+        self.gobacksearch.clicked.connect(self.open_MainWindow2)
+        self.gobacksearch.clicked.connect(SearchData.close)
         self.label_2 = QtWidgets.QLabel(SearchData)
         self.label_2.setGeometry(QtCore.QRect(40, 60, 391, 31))
         font = QtGui.QFont()
@@ -135,11 +143,4 @@ class Ui_SearchData(object):
 
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    SearchData = QtWidgets.QWidget()
-    ui = Ui_SearchData()
-    ui.setupUi(SearchData)
-    SearchData.show()
-    sys.exit(app.exec_())
+

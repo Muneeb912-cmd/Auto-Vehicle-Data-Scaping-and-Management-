@@ -8,9 +8,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import file3 as f3
 
 
 class Ui_datadisplay(object):
+    def open_MainWindow1(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=f3.Ui_MainMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, datadisplay):
         datadisplay.setObjectName("datadisplay")
         datadisplay.resize(788, 666)
@@ -70,6 +77,8 @@ class Ui_datadisplay(object):
         self.gobackdatadisplay.setIcon(icon)
         self.gobackdatadisplay.setIconSize(QtCore.QSize(20, 20))
         self.gobackdatadisplay.setObjectName("gobackdatadisplay")
+        self.gobackdatadisplay.clicked.connect(self.open_MainWindow1)
+        self.gobackdatadisplay.clicked.connect(datadisplay.close)
 
         self.retranslateUi(datadisplay)
         QtCore.QMetaObject.connectSlotsByName(datadisplay)
@@ -97,11 +106,4 @@ class Ui_datadisplay(object):
         self.gobackdatadisplay.setText(_translate("datadisplay", "Go Back"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    datadisplay = QtWidgets.QWidget()
-    ui = Ui_datadisplay()
-    ui.setupUi(datadisplay)
-    datadisplay.show()
-    sys.exit(app.exec_())
+

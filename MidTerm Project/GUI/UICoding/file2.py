@@ -8,9 +8,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from file3 import *
 
 class Ui_LogIn(object):
+    def open_MainWindow(self):
+        self.window= QtWidgets.QWidget()
+        self.ui=Ui_MainMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
+        
     def setupUi(self, LogIn):
         LogIn.setObjectName("LogIn")
         LogIn.resize(692, 524)
@@ -79,7 +85,8 @@ class Ui_LogIn(object):
         self.signin.setIcon(icon1)
         self.signin.setIconSize(QtCore.QSize(30, 30))
         self.signin.setObjectName("signin")
-
+        self.signin.clicked.connect(self.open_MainWindow)
+        self.signin.clicked.connect(LogIn.close)
         self.retranslateUi(LogIn)
         QtCore.QMetaObject.connectSlotsByName(LogIn)
 
@@ -94,11 +101,3 @@ class Ui_LogIn(object):
         self.signin.setText(_translate("LogIn", "SignIn"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    LogIn = QtWidgets.QWidget()
-    ui = Ui_LogIn()
-    ui.setupUi(LogIn)
-    LogIn.show()
-    sys.exit(app.exec_())
