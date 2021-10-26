@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>889</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>891</width>
+     <height>611</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/BG1/Capture.PNG);</string>
+   </property>
+   <widget class="QProgressBar" name="progressBar1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>470</y>
+      <width>751</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/a9/download (1).png);</string>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>510</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/B/download (2).jpg);
+color:white</string>
+    </property>
+    <property name="text">
+     <string>Loading Please Wait.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Launch">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>280</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/L/launch.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Pics/BG1.qrc"/>
+  <include location="Pics/launch1.qrc"/>
+  <include location="Pics/black.qrc"/>
+  <include location="Pics/a9.qrc"/>
+ </resources>
+ <connections/>
+</ui>

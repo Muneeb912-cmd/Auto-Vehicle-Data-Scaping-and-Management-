@@ -140,12 +140,3 @@ class Ui_Firstpage(object):
                 self.label_6.setText(_translate("Firstpage", "Password"))
                 self.pushButton_2.setText(_translate("Firstpage", "Exit"))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Firstpage = QtWidgets.QWidget()
-    ui = Ui_Firstpage()
-    ui.setupUi(Firstpage)
-    Firstpage.show()
-    sys.exit(app.exec_())
