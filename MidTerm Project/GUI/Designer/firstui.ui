@@ -103,7 +103,7 @@
     <string>Sign In</string>
    </property>
    <property name="icon">
-    <iconset resource="Pics/a1.qrc">
+    <iconset resource="../Pics/a1.qrc">
      <normaloff>:/a1/icons8-login-30.png</normaloff>:/a1/icons8-login-30.png</iconset>
    </property>
    <property name="iconSize">
@@ -163,7 +163,7 @@ border :3px black; </string>
      <rect>
       <x>50</x>
       <y>20</y>
-      <width>111</width>
+      <width>351</width>
       <height>31</height>
      </rect>
     </property>
@@ -219,21 +219,29 @@ border :3px black; </string>
      <rect>
       <x>250</x>
       <y>190</y>
-      <width>101</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 255, 255)</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>Sign Up</string>
     </property>
     <property name="icon">
-     <iconset resource="Pics/a9.qrc">
-      <normaloff>:/a9/download (1).jpg</normaloff>:/a9/download (1).jpg</iconset>
+     <iconset>
+      <normaloff>../Pics/—Pngtree—avatar icon profile icon member_5247852.png</normaloff>../Pics/—Pngtree—avatar icon profile icon member_5247852.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>100</width>
-      <height>100</height>
+      <width>50</width>
+      <height>50</height>
      </size>
     </property>
    </widget>
@@ -259,7 +267,7 @@ border :3px black; </string>
     <string>Exit</string>
    </property>
    <property name="icon">
-    <iconset resource="Pics/a3.qrc">
+    <iconset resource="../Pics/a3.qrc">
      <normaloff>:/a3/icons8-exit-30.png</normaloff>:/a3/icons8-exit-30.png</iconset>
    </property>
    <property name="iconSize">
@@ -271,10 +279,10 @@ border :3px black; </string>
   </widget>
  </widget>
  <resources>
-  <include location="Pics/a1.qrc"/>
-  <include location="Pics/a9.qrc"/>
-  <include location="Pics/a3.qrc"/>
-  <include location="Pics/a2.qrc"/>
+  <include location="../Pics/a1.qrc"/>
+  <include location="../Pics/a9.qrc"/>
+  <include location="../Pics/a3.qrc"/>
+  <include location="../Pics/a2.qrc"/>
  </resources>
  <connections/>
 </ui>

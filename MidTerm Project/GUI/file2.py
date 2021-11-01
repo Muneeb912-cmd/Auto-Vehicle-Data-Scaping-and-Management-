@@ -8,14 +8,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from pandas.core.arrays.categorical import contains
 from file3 import *
 
 class Ui_LogIn(object):
-    def open_MainWindow(self):
-        self.window= QtWidgets.QWidget()
-        self.ui=Ui_MainMenu()
-        self.ui.setupUi(self.window)
-        self.window.show()
+    # def open_MainWindow(self):
+    #     self.window= QtWidgets.QWidget()
+    #     self.ui=Ui_MainMenu()
+    #     self.ui.setupUi(self.window)
+    #     self.window.show()
         
     def setupUi(self, LogIn):
         LogIn.setObjectName("LogIn")
@@ -85,7 +86,7 @@ class Ui_LogIn(object):
         self.signin.setIcon(icon1)
         self.signin.setIconSize(QtCore.QSize(30, 30))
         self.signin.setObjectName("signin")
-        self.signin.clicked.connect(self.open_MainWindow)
+        self.signin.clicked.connect(self.Login)
         self.signin.clicked.connect(LogIn.close)
         self.retranslateUi(LogIn)
         QtCore.QMetaObject.connectSlotsByName(LogIn)
@@ -100,4 +101,32 @@ class Ui_LogIn(object):
         self.label_6.setText(_translate("LogIn", "Password"))
         self.signin.setText(_translate("LogIn", "SignIn"))
 
+    def Login(self):
+        email='Muneeb@gmail.com'
+        password=123
+        import pandas as pd
+        
+        column_names = ["email", "password"]
+        df = pd.read_csv("LoginData.csv", names=column_names)
+        list1=df.email.to_list()
+        list2=df.password.to_list()
+        if email in list1:
+            if password in list2:
+                self.window= QtWidgets.QWidget()
+                self.ui=Ui_MainMenu()
+                self.ui.setupUi(self.window)
+                self.window.show()
+            else:
+                print('none')
+                        
+        
 
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_LogIn()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())

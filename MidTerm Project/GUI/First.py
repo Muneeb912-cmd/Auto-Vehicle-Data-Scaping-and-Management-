@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import time
 import file1 as f1
 
+
 class Ui_Form(object):
     def open_LogInWindow(self):
         self.window= QtWidgets.QWidget()
@@ -54,20 +55,23 @@ class Ui_Form(object):
         self.Launch.clicked.connect(Form.close)
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
+        
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Welcome!!"))
-        self.label1.setText(_translate("Form", "Load Successfull!!"))
+        self.label1.setText(_translate("Form", "Loading Data!!"))
     
     def run(self,n):
+        
         for i in range(n):
             time.sleep(0.01)
             self.progressBar1.setValue(i+1)
 
-        self.label1.show()==True
 
     def show_Bar_label(self):
+        self.Launch.hide()==True
+        self.label1.show()==True
         self.progressBar1.show()==True
         
 

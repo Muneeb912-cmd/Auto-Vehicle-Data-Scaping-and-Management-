@@ -9,26 +9,27 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
-from file4 import Ui_datadisplay
-from file6 import Ui_sorting
-from file5 import Ui_SearchData
+import file4 as f4
+import file6 as f6
+import file5 as f5
+
 
 class Ui_MainMenu(object):
     def open_DataScrappingWindow(self):
         self.window= QtWidgets.QWidget()
-        self.ui=Ui_datadisplay()
+        self.ui=f4.Ui_datadisplay()
         self.ui.setupUi(self.window)
         self.window.show()
     
     def open_DataSortingWindow(self):
         self.window= QtWidgets.QWidget()
-        self.ui=Ui_sorting()
+        self.ui=f6.Ui_sorting()
         self.ui.setupUi(self.window)
         self.window.show()
 
     def open_DataSearchingWindow(self):
         self.window= QtWidgets.QWidget()
-        self.ui=Ui_SearchData()
+        self.ui=f5.Ui_SearchData()
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -93,11 +94,12 @@ class Ui_MainMenu(object):
         self.scrapdata.setFont(font)
         self.scrapdata.setStyleSheet("background-color:rgb(212, 255, 249)")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Pics/download-icon-vector-clip-art-260nw-485354581.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("Pics/download (3).jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.scrapdata.setIcon(icon1)
         self.scrapdata.setIconSize(QtCore.QSize(50, 50))
-        self.scrapdata.setObjectName("scrapdata")
+        self.scrapdata.setObjectName("Display")
         self.scrapdata.clicked.connect(self.open_DataScrappingWindow)
+        
         self.scrapdata.clicked.connect(MainMenu.close)
         self.searchdata = QtWidgets.QPushButton(self.frame)
         self.searchdata.setGeometry(QtCore.QRect(130, 180, 281, 51))
@@ -137,9 +139,9 @@ class Ui_MainMenu(object):
         self.label_2.setText(_translate("MainMenu", "(Data Scraper and Manager)"))
         self.label_3.setText(_translate("MainMenu", "Chose from the followng available options"))
         self.exitmain.setText(_translate("MainMenu", "Exit"))
-        self.scrapdata.setText(_translate("MainMenu", "Scrap Data and save in csv File"))
+        self.scrapdata.setText(_translate("MainMenu", "Load and Display Data from File"))
         self.searchdata.setText(_translate("MainMenu", "Data Searching                          "))
         self.sortdata.setText(_translate("MainMenu", "Data Sorting                                   "))
 
-
+    
 
