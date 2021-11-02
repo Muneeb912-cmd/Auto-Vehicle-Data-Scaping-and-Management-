@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>788</width>
-    <height>700</height>
+    <height>749</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,7 +61,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>160</y>
+     <y>120</y>
      <width>161</width>
      <height>31</height>
     </rect>
@@ -82,9 +82,9 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>240</y>
+     <y>160</y>
      <width>651</width>
-     <height>351</height>
+     <height>181</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -101,7 +101,7 @@ border :3px black; </string>
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>90</y>
+      <y>100</y>
       <width>321</width>
       <height>31</height>
      </rect>
@@ -112,6 +112,21 @@ border :3px black; </string>
     <item>
      <property name="text">
       <string>Merge Sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Heap Sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tim Sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Quick Sort</string>
      </property>
     </item>
     <item>
@@ -135,62 +150,11 @@ border :3px black; </string>
      </property>
     </item>
    </widget>
-   <widget class="QComboBox" name="method2">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>250</y>
-      <width>321</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255, 255)</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Quick Sort</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Tim Sort</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Heap Sort</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>250</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Method</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>50</y>
+      <x>50</x>
+      <y>60</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -208,7 +172,7 @@ border :3px black; </string>
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>90</y>
+      <y>100</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -222,44 +186,13 @@ border :3px black; </string>
      <string>Method</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>200</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Column Nmae</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="colname1">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>40</y>
-      <width>321</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255, 255)</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="colname2">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>200</y>
-      <width>321</width>
-      <height>31</height>
+      <x>160</x>
+      <y>60</y>
+      <width>121</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -270,7 +203,7 @@ border :3px black; </string>
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>130</y>
+      <y>140</y>
       <width>75</width>
       <height>31</height>
      </rect>
@@ -282,28 +215,79 @@ border :3px black; </string>
      <string>Apply</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="apply2">
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>66</x>
+      <y>10</y>
+      <width>531</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>You can chose the name the column you want to sort from the Display window </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>290</y>
-      <width>75</width>
-      <height>31</height>
+      <y>60</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Number of Rows</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="colname1_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>60</y>
+      <width>121</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(193, 255, 251)</string>
+     <string notr="true">background-color:rgb(255, 255, 255)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>60</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
-     <string>Apply</string>
+     <string>/10,48,576</string>
     </property>
    </widget>
   </widget>
   <widget class="QPushButton" name="gobacksorting">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>620</y>
+     <x>640</x>
+     <y>680</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -320,7 +304,7 @@ border :3px black; </string>
     <string>Go Back</string>
    </property>
    <property name="icon">
-    <iconset resource="Pics/a10.qrc">
+    <iconset>
      <normaloff>:/a10/images (1).png</normaloff>:/a10/images (1).png</iconset>
    </property>
    <property name="iconSize">
@@ -328,6 +312,56 @@ border :3px black; </string>
      <width>20</width>
      <height>20</height>
     </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>510</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 255, 255)</string>
+   </property>
+   <property name="text">
+    <string>Clear Table</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>Results of Sorting</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>400</y>
+     <width>471</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 255, 255)</string>
    </property>
   </widget>
  </widget>

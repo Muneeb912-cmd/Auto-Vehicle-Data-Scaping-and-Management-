@@ -8,11 +8,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QThread
+from PyQt5.QtCore import QThread,pyqtSignal
 from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QTableWidget, QTableWidgetItem
 import file3 as f3
+import Main as M
 import pandas as pd
-
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+import time
 
 class Ui_datadisplay(object):
     def setupUi(self, datadisplay):
@@ -75,9 +79,12 @@ class Ui_datadisplay(object):
                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.LoadData.setIcon(icon1)
         self.LoadData.setIconSize(QtCore.QSize(45, 45))
-        self.LoadData.setObjectName("LoadData")
+        self.LoadData.setObjectName("LoadData")    
+        # self.LoadData.clicked.connect(self.startProgressBar)    
         self.LoadData.clicked.connect(self.woker1)
-        # self.LoadData.clicked.connect(self.dataHead)
+        
+        # self.LoadData.clicked.connect(self.datahead)
+        # self.tableWidget.hide()==True
         self.label_4 = QtWidgets.QLabel(datadisplay)
         self.label_4.setGeometry(QtCore.QRect(50, 170, 521, 41))
         font = QtGui.QFont()
@@ -112,18 +119,12 @@ class Ui_datadisplay(object):
         self.gobackdatadisplay.setText(_translate("datadisplay", "Go Back"))
         self.LoadData.setText(_translate("datadisplay", "Load and Display"))
         self.label_4.setText(_translate(
-            "datadisplay", "Data From CSV file successfully Loaded and displayed"))
-        self.label_5.setText(_translate(
-            "datadisplay", "Please Wait Data Is Loading...."))
+            "datadisplay", "Data Loaded and displayed Limited to 50,000 only"))
+        self.label_5.setText(_translate("datadisplay", "Please Wait Data Is Loading...."))
 
     def woker1(self):
-        self.thread1=ThreadClass()
-        self.label_3.show() == True
-        self.label_5.show() == True
-        self.LoadData.hide() == True
-        self.progressBar.show() == True
-        self.thread1.start()
-   
+        M.load_File(self)
+        M.datahead(self)   
 
     def Display_Label_ProgressBar(self):
         self.label_3.show() == True
@@ -138,28 +139,8 @@ class Ui_datadisplay(object):
         self.window.show()    
         
 
-class ThreadClass(QtCore.QThread):
-    def __init__(self, parent=None):
-        super(ThreadClass, self).__init__(parent)
-        
-    
-    def run(self):
-        try:
-            self.all_data = pd.read_csv('Data.csv')
-        except:
-            print("An Error Occured!")
-        self.LoadData.setEnabled(False)
-        NumRows = len(self.all_data.index)
-        self.tableWidget.setColumnCount(len(self.all_data.columns))
-        self.tableWidget.setRowCount(NumRows)
-        self.tableWidget.setHorizontalHeaderLabels(self.all_data.columns)
-        for i in range(NumRows):
-            for j in range(len(self.all_data.columns)):
-                self.tableWidget.setItem(
-                    i, j, QTableWidgetItem(str(self.all_data.iat[i, j])))
 
-        self.tableWidget.resizeColumnsToContents()
-        self.tableWidget.resizeRowsToContents()
+
 
     
 

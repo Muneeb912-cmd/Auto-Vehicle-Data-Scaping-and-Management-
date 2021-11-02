@@ -7,17 +7,12 @@
 # WARNING! All changes made in this file will be lost!
 
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pandas.core.arrays.categorical import contains
 from file3 import *
 
 class Ui_LogIn(object):
-    # def open_MainWindow(self):
-    #     self.window= QtWidgets.QWidget()
-    #     self.ui=Ui_MainMenu()
-    #     self.ui.setupUi(self.window)
-    #     self.window.show()
-        
     def setupUi(self, LogIn):
         LogIn.setObjectName("LogIn")
         LogIn.resize(692, 524)
@@ -55,14 +50,6 @@ class Ui_LogIn(object):
         self.label_4.setStyleSheet("border-image: url(Pics/—Pngtree—avatar icon profile icon member_5247852.png);")
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
-        self.emailsignup = QtWidgets.QLineEdit(LogIn)
-        self.emailsignup.setGeometry(QtCore.QRect(240, 240, 311, 31))
-        self.emailsignup.setStyleSheet("background-color:rgb(255, 255, 255)")
-        self.emailsignup.setObjectName("emailsignup")
-        self.passwordsignup = QtWidgets.QLineEdit(LogIn)
-        self.passwordsignup.setGeometry(QtCore.QRect(240, 310, 311, 31))
-        self.passwordsignup.setStyleSheet("background-color:rgb(255, 255, 255)")
-        self.passwordsignup.setObjectName("passwordsignup")
         self.label_5 = QtWidgets.QLabel(LogIn)
         self.label_5.setGeometry(QtCore.QRect(130, 250, 47, 13))
         font = QtGui.QFont()
@@ -75,21 +62,30 @@ class Ui_LogIn(object):
         font.setPointSize(12)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
-        self.signin = QtWidgets.QPushButton(LogIn)
-        self.signin.setGeometry(QtCore.QRect(330, 380, 111, 41))
+        self.email = QtWidgets.QPlainTextEdit(LogIn)
+        self.email.setGeometry(QtCore.QRect(240, 240, 311, 31))
+        self.email.setStyleSheet("background-color:rgb(255, 255, 255)")
+        self.email.setObjectName("email")
+        self.password = QtWidgets.QPlainTextEdit(LogIn)
+        self.password.setGeometry(QtCore.QRect(240, 310, 311, 31))
+        self.password.setStyleSheet("background-color:rgb(255, 255, 255)")
+        self.password.setObjectName("password")
+        self.Signin = QtWidgets.QPushButton(LogIn)
+        self.Signin.setGeometry(QtCore.QRect(330, 400, 121, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
-        self.signin.setFont(font)
-        self.signin.setStyleSheet("background-color:rgb(193, 255, 251)")
+        self.Signin.setFont(font)
+        self.Signin.setStyleSheet("background-color:rgb(255, 255, 255)")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Pics/icons8-login-30.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.signin.setIcon(icon1)
-        self.signin.setIconSize(QtCore.QSize(30, 30))
-        self.signin.setObjectName("signin")
-        self.signin.clicked.connect(self.Login)
-        self.signin.clicked.connect(LogIn.close)
+        self.Signin.setIcon(icon1)
+        self.Signin.setIconSize(QtCore.QSize(30, 30))
+        self.Signin.setObjectName("Signin")
+
         self.retranslateUi(LogIn)
         QtCore.QMetaObject.connectSlotsByName(LogIn)
+        self.Signin.clicked.connect(self.Login1)
+        self.Signin.clicked.connect(LogIn.close)
 
     def retranslateUi(self, LogIn):
         _translate = QtCore.QCoreApplication.translate
@@ -99,11 +95,15 @@ class Ui_LogIn(object):
         self.label_3.setText(_translate("LogIn", "Verify Yourself:"))
         self.label_5.setText(_translate("LogIn", "Email"))
         self.label_6.setText(_translate("LogIn", "Password"))
-        self.signin.setText(_translate("LogIn", "SignIn"))
-
-    def Login(self):
-        email='Muneeb@gmail.com'
-        password=123
+        self.Signin.setText(_translate("LogIn", "Sign In"))
+# import sigin_rc
+    def Login1(self,LogIn):
+        super().__init__()
+        email=self.email.toPlainText()
+        try:
+            password=int(self.password.toPlainText())
+        except:
+            print('input invalid')
         import pandas as pd
         
         column_names = ["email", "password"]
@@ -116,17 +116,21 @@ class Ui_LogIn(object):
                 self.ui=Ui_MainMenu()
                 self.ui.setupUi(self.window)
                 self.window.show()
+                
             else:
-                print('none')
-                        
-        
-
+                self.email.clear()
+                self.password.clear()
+                return False
+        else:
+            self.email.clear()
+            self.password.clear()
+            return False
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
+    LogIn = QtWidgets.QWidget()
     ui = Ui_LogIn()
-    ui.setupUi(Form)
-    Form.show()
+    ui.setupUi(LogIn)
+    LogIn.show()
     sys.exit(app.exec_())
