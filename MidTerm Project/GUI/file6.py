@@ -212,7 +212,10 @@ class Ui_sorting(object):
                     print("Wrong Column name")
             else:
                 print("none")
- 
+                self.colname1.clear()
+                self.colname1_2.clear()
+       
+                
             Method=self.method1.currentText()
             Sort.SortCol(self,List,Method)
 
