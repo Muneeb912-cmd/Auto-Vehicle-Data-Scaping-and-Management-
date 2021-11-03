@@ -198,82 +198,82 @@ def heapSort(arr):
 
 
 # ********************************************************************************************************************************
-                                                                                                                                #*
-from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QTableWidget, QTableWidgetItem                                  #*
+                                                                                                                                 
+from PyQt5.QtWidgets import QApplication, QWidget, QFileDialog, QTableWidget, QTableWidgetItem                                   
 def SortCol(self,List,Method):    
     numcols =1         
     numrows=len(List)
     self.tableWidget.setColumnCount(numcols)
     self.tableWidget.setRowCount(numrows)   
-                                                                                     #*0
-    # if List!="" and Method!="" :                                                                                                #*
-    if Method=="Bubble Sort":                                                                                               #*
-            bubbleSort(List)                                                                                           #*
-            # print(DispList)                                                                                                     #*
+                                                                                      
+    # if List!="" and Method!="" :                                                                                                 
+    if Method=="Bubble Sort":                                                                                                
+            bubbleSort(List)                                                                                            
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
+                for column in range(numcols):                                                                                       
                     self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))
             self.tableWidget.resizeColumnsToContents()
-            self.tableWidget.resizeRowsToContents()                                                #*
-                                                                                                                                #*
-    elif Method=="Merge Sort":                                                                                              #*
-            DispList=merge_sort(List)                                                                                           #*
-            # print(DispList)                                                                                                     #*
+            self.tableWidget.resizeRowsToContents()                                                 
+                                                                                                                                 
+    elif Method=="Merge Sort":                                                                                               
+            DispList=merge_sort(List)                                                                                            
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
+                for column in range(numcols):                                                                                       
                     self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))
-                                                                    #*
+                                                                     
             self.tableWidget.resizeColumnsToContents()
-            self.tableWidget.resizeRowsToContents()                                                                                                                    #*
-                                                                                                                                #*
-    elif Method=="Heap Sort":                                                                                               #*
-            DispList=heapSort(List)                                                                                             #*
-            # print(DispList)                                                                                                     #*
+            self.tableWidget.resizeRowsToContents()                                                                                                                     
+                                                                                                                                 
+    elif Method=="Heap Sort":                                                                                                
+            DispList=heapSort(List)                                                                                              
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
+                for column in range(numcols):                                                                                       
                     self.tableWidget.setItem(row, column, QTableWidgetItem((List[row]))) 
-                                                                   #*
+                                                                    
             self.tableWidget.resizeColumnsToContents()
-            self.tableWidget.resizeRowsToContents()                                                                                                                    #*
-                                                                                                                                #*                                 
-    elif Method=="Tim Sort":                                                                                                #*
-            DispList=tim_sort(List)                                                                                             #*
-            # print(DispList)                                                                                                     #*
+            self.tableWidget.resizeRowsToContents()                                                                                                                     
+                                                                                                                                                                  
+    elif Method=="Tim Sort":                                                                                                 
+            DispList=tim_sort(List)                                                                                              
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
-                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                #*
+                for column in range(numcols):                                                                                       
+                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                 
              
-                                                                                                                                #*
+                                                                                                                                 
             self.tableWidget.resizeColumnsToContents()
             self.tableWidget.resizeRowsToContents()
-                                                                                                                                #*
-    elif Method=="Quick Sort":                                                                                              #*
-            DispList=quick_sort(List)                                                                                           #*
-            # print(DispList)                                                                                                     #*
+                                                                                                                                 
+    elif Method=="Quick Sort":                                                                                               
+            DispList=quick_sort(List)                                                                                            
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
-                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                #*
+                for column in range(numcols):                                                                                       
+                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                 
             self.tableWidget.resizeColumnsToContents()
-            self.tableWidget.resizeRowsToContents()                                                                                                                    #*
-                                                                                                                                #*
-    elif Method=="Insertion Sort":                                                                                          #*
-            DispList=Insertion_Algo(List)                                                                                       #*
-            # print(DispList)                                                                                                     #*
+            self.tableWidget.resizeRowsToContents()                                                                                                                     
+                                                                                                                                 
+    elif Method=="Insertion Sort":                                                                                           
+            DispList=Insertion_Algo(List)                                                                                        
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
-                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                #*
+                for column in range(numcols):                                                                                       
+                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                 
             self.tableWidget.resizeColumnsToContents()
-            self.tableWidget.resizeRowsToContents()                                                                                                                    #*
-                                                                                                                                #*
-    elif Method=="Slection Sort":                                                                                           #*
-            DispList=selectionSort(List)                                                                                        #*
-            # print(DispList)                                                                                                     #*
+            self.tableWidget.resizeRowsToContents()                                                                                                                     
+                                                                                                                                 
+    elif Method=="Slection Sort":                                                                                            
+            DispList=selectionSort(List)                                                                                         
+            # print(DispList)                                                                                                      
             for row in range(numrows):
-                for column in range(numcols):                                                                                      #*
-                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                #*
+                for column in range(numcols):                                                                                       
+                    self.tableWidget.setItem(row, column, QTableWidgetItem((List[row])))                                                 
             self.tableWidget.resizeColumnsToContents()
-            self.tableWidget.resizeRowsToContents()                                                                                                                    #*
-                                                                                                                                #*
+            self.tableWidget.resizeRowsToContents()                                                                                                                     
+                                                                                                                                 
 # ********************************************************************************************************************************
 
 
