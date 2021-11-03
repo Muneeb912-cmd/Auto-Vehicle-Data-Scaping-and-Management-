@@ -136,7 +136,10 @@ class Ui_sorting(object):
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
         self.apply1.clicked.connect(self.Sort_columns)
-
+        self.gobacksorting.clicked.connect(self.open_MainWindow1)
+        self.gobacksorting.clicked.connect(sorting.close)
+        self.pushButton.clicked.connect(self.tableWidget.clear)
+        self.pushButton.clicked.connect(self.clear_Table)
 
 
 
@@ -166,6 +169,19 @@ class Ui_sorting(object):
         self.gobacksorting.setText(_translate("sorting", "Go Back"))
         self.pushButton.setText(_translate("sorting", "Clear Table"))
         self.label_7.setText(_translate("sorting", "Results of Sorting"))
+    
+    def clear_Table(self):
+        self.tableWidget.setColumnCount(0)
+        self.tableWidget.setRowCount(0)  
+
+
+
+
+    def open_MainWindow1(self):
+        self.window = QtWidgets.QWidget()
+        self.ui = f3.Ui_MainMenu()
+        self.ui.setupUi(self.window)
+        self.window.show()
 
 
     def Sort_columns(self):
@@ -176,24 +192,32 @@ class Ui_sorting(object):
                 print('Error in file Opening')
 
             col_name=self.colname1.text()
-            NumRows=int(self.colname1_2.text())
+            try:
+                NumRows=int(self.colname1_2.text())
+            except:
+                print('none')
+                self.colname1.clear()
+
             count=1
             List=[]
-            if col_name.isalnum():
+            headers=['Name','Body Color','Miles Driven','location','Price','Car Body type','Transmission']
+            if col_name in headers and col_name!='':
                 try:
                     for items in (df[col_name]):
-                        while count<=NumRows:
+                        if count<=NumRows:
                             List.append(items)
                             count+=1
+                    # print (List)
                 except:
                     print("Wrong Column name")
-
-                Method=self.method1.currentText()
-                Sort.SortCol(self,List,Method)
-
-
             else:
-                self.colname1.clear()
+                print("none")
+ 
+            Method=self.method1.currentText()
+            Sort.SortCol(self,List,Method)
+
+
+            
 
 
 
