@@ -12,6 +12,7 @@ import sys
 import file4 as f4
 import file6 as f6
 import file5 as f5
+import file3 as f3
 
 
 class Ui_MainMenu(object):
@@ -30,6 +31,8 @@ class Ui_MainMenu(object):
     def open_DataSearchingWindow(self):
         self.window= QtWidgets.QWidget()
         self.ui=f5.Ui_SearchData()
+        f5.Ui_SearchData().load_File
+        f5.Ui_SearchData().datahead        
         self.ui.setupUi(self.window)
         self.window.show()
 

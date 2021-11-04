@@ -144,12 +144,3 @@ class Ui_datadisplay(object):
 
     
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    datadisplay = QtWidgets.QWidget()
-    ui = Ui_datadisplay()
-    ui.setupUi(datadisplay)
-    datadisplay.show()
-    sys.exit(app.exec_())

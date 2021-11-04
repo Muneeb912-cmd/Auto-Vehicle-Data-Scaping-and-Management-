@@ -81,4 +81,4 @@ def datahead(self):
     if count==100:
         self.LoadData.hide()==True
         self.progressBar.hide()==True
-        self.label_4.show()==True
+        self.label_4.show()==True 

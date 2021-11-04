@@ -193,7 +193,23 @@ def heapSort(arr):
         heapify(arr, i, 0)
 
 
+class Data: 
+    def __init__(self,Name,Miles,Driven,location,Price,Body_Color,Car_Body_type,Transmission):
+        self.Name=Name
+        self.Miles=Miles
+        self.Driven=Driven
+        self.location=location
+        self.Price=Price
+        self.Body_Color=Body_Color
+        self.Car_Body_type=Car_Body_type
+        self.Transmission=Transmission
 
+import pandas as pd
+df=pd.read_csv('Data.csv')
+List=[]
+# for i,row in df.iterrows():
+#     # obj=Data(df.Name.values[i],df.M.values[i],df.Driven.values[i],df.location.values[i],df.Price.values[i],df.Transmission.values[i])
+#     List.append(obj)
 
 
 
@@ -275,6 +291,10 @@ def SortCol(self,List,Method):
             self.tableWidget.resizeRowsToContents()                                                                                                                     
                                                                                                                                  
 # ********************************************************************************************************************************
+
+
+
+
 
 
 

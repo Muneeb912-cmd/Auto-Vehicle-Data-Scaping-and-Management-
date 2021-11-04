@@ -126,11 +126,3 @@ class Ui_LogIn(object):
             self.password.clear()
             return False
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    LogIn = QtWidgets.QWidget()
-    ui = Ui_LogIn()
-    ui.setupUi(LogIn)
-    LogIn.show()
-    sys.exit(app.exec_())
