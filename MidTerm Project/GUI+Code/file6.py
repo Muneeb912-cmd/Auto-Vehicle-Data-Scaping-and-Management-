@@ -228,11 +228,3 @@ class Ui_sorting(object):
 
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    sorting = QtWidgets.QWidget()
-    ui = Ui_sorting()
-    ui.setupUi(sorting)
-    sorting.show()
-    sys.exit(app.exec_())
